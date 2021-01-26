@@ -30,4 +30,8 @@ public class MatrixController {
                 + "6) Obtención del determinante de una matriz \n"
                 + "7) Solución de un sistema de ecuaciones por el método de Cramer");
    }
+   
+   public int getUserInput(){
+       return view.getUserInput();
+   }
 }
