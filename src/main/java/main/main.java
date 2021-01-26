@@ -1,20 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
+import controllers.MatrixController;
 import models.Matrix;
 import views.ConsoleView;
 
 /**
  *
- * @author luis_
+ * @author Luis Gerardo Leon Ortega
  */
+
 public class main {
     public static void main(String[] args){
-        Matrix matrix = new Matrix(2,2);
-        ConsoleView console = new ConsoleView();
+        
+        Matrix model = new Matrix();
+        ConsoleView view = new ConsoleView();
+        MatrixController controller = new MatrixController(model, view);
+        
+        controller.printMenu();
+    
     }
 }

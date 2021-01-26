@@ -11,13 +11,13 @@ import java.util.ArrayList;
  * @author luis_
  */
 public class Matrix {
+    
     private int[][] matrixData;
-    public Matrix(int width, int height){
-        matrixData = new int[width][height];
-    }
+    
     public int[][] getData(){
         return this.matrixData;
     }
+    
     public void setData(int[][] newData){
         this.matrixData = newData;
     }
