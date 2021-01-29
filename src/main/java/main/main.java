@@ -1,14 +1,13 @@
 package main;
 
 import controllers.MatrixController;
-import java.util.Scanner;
 import models.Matrix;
 import views.ConsoleView;
 
 /**
- *
- * @author Luis Gerardo Leon Ortega
+ * @author luislortega
  */
+
 public class main {
 
     public static void main(String[] args) {
