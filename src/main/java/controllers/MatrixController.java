@@ -49,6 +49,8 @@ public class MatrixController {
                 restrictions and conditions you must meet.
                 need have the same dimentions....
                 */
+                view.printInConsole("=> ingresa los valores de tu segunda matriz en orden \n");
+                Matrix secondMatrix = getMatrix(matrixWidth, matrixHeight); 
                 break;
             case 2:
                 break;
@@ -74,6 +76,22 @@ public class MatrixController {
     }
     
     public void matrixMultiplication(){
+    
+    }
+    
+    public void matrixReverseGauss(){
+    
+    }
+    
+    public void ecuationSystemGauss(){
+    
+    }
+    
+    public void matrixDeterminant(){
+    
+    }
+    
+    public void ecuationSystemCramer(){
     
     }
 
