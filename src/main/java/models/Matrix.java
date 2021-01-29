@@ -14,6 +14,10 @@ public class Matrix {
     
     private int[][] matrixData;
     
+    public void startMatrix(int width, int height){
+        this.matrixData = new int[width][height];
+    }
+    
     public int[][] getData(){
         return this.matrixData;
     }
