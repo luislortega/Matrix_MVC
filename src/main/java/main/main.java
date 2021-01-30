@@ -16,6 +16,5 @@ public class main {
         MatrixController controller = new MatrixController(model, view);
         controller.printMenu();
         controller.startProgram();
-        controller.printResult();
     }
 }

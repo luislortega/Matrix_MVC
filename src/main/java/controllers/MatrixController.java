@@ -37,18 +37,8 @@ public class MatrixController {
         int matrixHeight = view.getUserInput();
         view.printInConsole("=> Ingresa los valores de tu matriz en orden \n");
         this.model = getMatrix(matrixWidth, matrixHeight);
-        /*
-        Matrix ejemplo = new Matrix();
-        ejemplo.startMatrix(1, 2);
-        view.printInConsole("width:"+ejemplo.getData().length);
-        view.printInConsole("heigth:"+ejemplo.getData()[0].length);
-         */
         switch (userOption) {
             case 1:
-                /*
-                restrictions and conditions you must meet.
-                need have the same dimentions....
-                */
                 view.printInConsole("=> ingresa los valores de tu segunda matriz en orden \n");
                 Matrix secondMatrix = getMatrix(matrixWidth, matrixHeight); 
                 matrixSum(secondMatrix);
@@ -69,8 +59,13 @@ public class MatrixController {
     }
     
     public void matrixSum(Matrix matrix){
+        this.view.printInConsole(" \n Iniciando proceso... \n");
         this.view.printMatrixInConsole(matrix);
+        this.view.printInConsole("\n + \n");
+        this.view.printMatrixInConsole(this.model);
+        this.view.printInConsole(" \n = \n");
         this.model.matrixSum(matrix);
+        this.view.printMatrixInConsole(this.model);
     }
     
     public void scalarMultiplication(){
@@ -108,9 +103,5 @@ public class MatrixController {
         Matrix matrix = new Matrix();
         matrix.setData(matrixRepresentation);
         return matrix;
-    }
-
-    public void printResult() {
-
     }
 }
