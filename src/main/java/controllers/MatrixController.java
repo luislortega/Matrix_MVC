@@ -69,6 +69,7 @@ public class MatrixController {
     }
     
     public void matrixSum(Matrix matrix){
+        this.view.printMatrixInConsole(matrix);
         this.model.matrixSum(matrix);
     }
     
