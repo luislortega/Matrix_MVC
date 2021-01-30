@@ -29,7 +29,7 @@ public class MatrixController {
                 + "=> Escoge tu opcion... \n");
     }
 
-    public void getUserOption() {
+    public void startProgram() {
         int userOption = view.getUserInput();
         view.printInConsole("=> Por favor escoge la anchura de tu matriz \n");
         int matrixWidth = view.getUserInput();
@@ -51,6 +51,7 @@ public class MatrixController {
                 */
                 view.printInConsole("=> ingresa los valores de tu segunda matriz en orden \n");
                 Matrix secondMatrix = getMatrix(matrixWidth, matrixHeight); 
+                matrixSum(secondMatrix);
                 break;
             case 2:
                 break;
@@ -67,8 +68,8 @@ public class MatrixController {
         }
     }
     
-    public void matrixSum(){
-    
+    public void matrixSum(Matrix matrix){
+        this.model.matrixSum(matrix);
     }
     
     public void scalarMultiplication(){
@@ -99,6 +100,7 @@ public class MatrixController {
         int[][] matrixRepresentation = new int[matrixWidth][matrixHeight];
         for (int posVertical = 0; posVertical < matrixWidth; posVertical++) {
             for (int posHorizontal = 0; posHorizontal < matrixHeight; posHorizontal++) {
+                view.printInConsole("["+posVertical+"]["+posHorizontal+"]: ");
                 matrixRepresentation[posVertical][posHorizontal] = view.getUserInput();
             }
         }

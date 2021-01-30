@@ -15,7 +15,7 @@ public class main {
         ConsoleView view = new ConsoleView();
         MatrixController controller = new MatrixController(model, view);
         controller.printMenu();
-        controller.getUserOption();
+        controller.startProgram();
         controller.printResult();
     }
 }
