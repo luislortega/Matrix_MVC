@@ -40,4 +40,17 @@ public class Matrix {
             }
         }
     }
+
+    public void matrixMultiplication(Matrix secondMatrix) {
+        int[][] matrixRepresentation = new int[getWidth()][secondMatrix.getHeight()];
+        for(int i = 0; i < getWidth(); i++) {
+            for (int j = 0; j < secondMatrix.getHeight(); j++) {
+                for (int k = 0; k < getHeight(); k++) {
+                    matrixRepresentation[i][j] += this.matrixData[i][k] * secondMatrix.getData()[k][j];
+                }
+            }
+        }
+        setData(matrixRepresentation);
+    }
+
 }

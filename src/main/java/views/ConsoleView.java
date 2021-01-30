@@ -19,11 +19,9 @@ public class ConsoleView {
         StringBuilder matrixBuilder = new StringBuilder();
         for (int posVertical = 0; posVertical < matrix.getWidth(); posVertical++) {
             for (int posHorizontal = 0; posHorizontal < matrix.getHeight(); posHorizontal++) {
-                
                 if (posHorizontal == 0) {
                     matrixBuilder.append("[");
                 }
-                
                 matrixBuilder.append(matrix.getData()[posVertical][posHorizontal]);
                 
                 if ((posHorizontal + 1) == matrix.getHeight()) {
@@ -32,7 +30,9 @@ public class ConsoleView {
                     matrixBuilder.append(",");
                 }
             }
-            matrixBuilder.append("\n");
+            if ((posVertical + 1) != matrix.getWidth()) {
+                matrixBuilder.append("\n");
+            }
         }
         printInConsole(matrixBuilder.toString());
     }
