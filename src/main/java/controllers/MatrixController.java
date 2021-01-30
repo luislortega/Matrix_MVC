@@ -44,6 +44,9 @@ public class MatrixController {
                 matrixSum(secondMatrix);
                 break;
             case 2:
+                view.printInConsole("=> ingresa el escalar por el cual vas a multiplicar la matriz \n");
+                int scalar = view.getUserInput();
+                scalarMultiplication(scalar);
                 break;
             case 3:
                 break;
@@ -68,8 +71,14 @@ public class MatrixController {
         this.view.printMatrixInConsole(this.model);
     }
     
-    public void scalarMultiplication(){
-    
+    public void scalarMultiplication(int scalar){
+        this.view.printInConsole(" \n Iniciando proceso... \n");
+        this.view.printMatrixInConsole(this.model);
+        this.view.printInConsole("\n * \n");
+        this.view.printInConsole(String.valueOf(scalar));
+        this.view.printInConsole(" \n = \n");
+        this.model.scalarMultiplication(scalar);
+        this.view.printMatrixInConsole(this.model);
     }
     
     public void matrixMultiplication(){
