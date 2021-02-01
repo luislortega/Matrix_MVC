@@ -4,8 +4,7 @@ import java.util.Scanner;
 import models.Matrix;
 
 /**
- *
- * @author Luis Gerardo Leon Ortega
+ * @author luislortega
  */
 public class ConsoleView {
 

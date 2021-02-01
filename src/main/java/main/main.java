@@ -7,7 +7,6 @@ import views.ConsoleView;
 /**
  * @author luislortega
  */
-
 public class main {
 
     public static void main(String[] args) {
